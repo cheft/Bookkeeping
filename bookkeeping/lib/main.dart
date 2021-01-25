@@ -3,7 +3,7 @@ import 'package:bookkeeping/main/main_page.dart';
 import 'package:bookkeeping/res/colours.dart';
 import 'package:bookkeeping/routers/application.dart';
 import 'package:bookkeeping/routers/routers.dart';
-import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as FluroRouter;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -23,7 +23,7 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp() {
     // 初始化路由
-    final router = Router();
+    final router = FluroRouter.FluroRouter();
     Routes.configureRoutes(router);
     Application.router = router;
   }

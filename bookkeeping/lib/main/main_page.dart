@@ -4,7 +4,7 @@ import 'package:bookkeeping/charts/charts_page.dart';
 import 'package:bookkeeping/res/colours.dart';
 import 'package:bookkeeping/util/fluro_navigator.dart';
 import 'package:bookkeeping/widgets/highlight_well.dart';
-import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as FluroRouter;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -136,7 +136,7 @@ class _MainPageState extends State<MainPage> {
                 child: HighLightWell(
                   onTap: () {
                     NavigatorUtils.push(context, BillRouter.bookkeepPage,
-                        transition: TransitionType.cupertinoFullScreenDialog);
+                        transition: FluroRouter.TransitionType.cupertinoFullScreenDialog);
                   },
                   isPressingEffect: false,
                   child: Stack(
@@ -160,7 +160,7 @@ class _MainPageState extends State<MainPage> {
                               NavigatorUtils.push(
                                   context, BillRouter.bookkeepPage,
                                   transition:
-                                      TransitionType.cupertinoFullScreenDialog);
+                                      FluroRouter.TransitionType.cupertinoFullScreenDialog);
                             },
                             isForeground: true,
                             borderRadius: BorderRadius.circular(48 / 2),

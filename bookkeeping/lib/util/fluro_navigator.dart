@@ -1,6 +1,6 @@
 import 'package:bookkeeping/routers/application.dart';
 import 'package:bookkeeping/routers/routers.dart';
-import 'package:fluro/fluro.dart';
+import 'package:fluro/fluro.dart' as FluroRouter;
 import 'package:flutter/material.dart';
 
 /// 路由跳转工具
@@ -8,7 +8,7 @@ class NavigatorUtils {
   static push(BuildContext context, String path,
       {bool replace = false,
       bool clearStack = false,
-      TransitionType transition = TransitionType.native}) {
+      FluroRouter.TransitionType transition = FluroRouter.TransitionType.native}) {
     FocusScope.of(context).requestFocus(FocusNode());
     Application.router.navigateTo(context, path,
         replace: replace, clearStack: clearStack, transition: transition);
@@ -18,7 +18,7 @@ class NavigatorUtils {
       BuildContext context, String path, Function(Object) function,
       {bool replace = false,
       bool clearStack = false,
-      TransitionType transition = TransitionType.native}) {
+      FluroRouter.TransitionType transition = FluroRouter.TransitionType.native}) {
     FocusScope.of(context).requestFocus(FocusNode());
     Application.router
         .navigateTo(context, path,
